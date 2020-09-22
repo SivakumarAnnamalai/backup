@@ -1,0 +1,23 @@
+<workflow-app xmlns='uri:oozie:workflow:0.5' name='SparkWordCount'>
+<start to='spark-node' />
+<action name='spark-node'>
+<spark xmlns="uri:oozie:spark-action:0.1">
+<job-tracker>${jobTracker}</job-tracker>
+<name-node>${nameNode}</name-node>
+<master>${master}</master>
+<name>Spark-Wordcount</name>
+<class>org.apache.spark.examples.JavaWordCount</class>
+<jar>spark-examples-1.6.0-hadoop2.6.0.jar</jar>
+<!--<spark-opts>spark.driver.extraJavaOptions=-Diop.version=4.1.0.0</spark-opts>-->
+<arg>test.txt</arg>
+</spark>
+<ok to="end" />
+<error to="fail" />
+</action>
+<kill name="fail">
+<message>Workflow failed, error
+message[${wf:errorMessage(wf:lastErrorNode())}]
+</message>
+</kill>
+<end name='end' />
+</workflow-app>

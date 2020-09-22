@@ -1,0 +1,50 @@
+    1  sudo apt-get install openssh-server
+    2  uname -a
+    3  ifconfig
+    4  ssh 172.25.181.183
+    5  touch test.txt
+    6  scp test.txt 172.25.181.183:
+    7  scp /home/bigdata/eclipse-jee-mars-1-linux-gtk-x86_64.tar.gz  172.25.181.183:
+    8  jps
+    9  sudo apt-get install openjdk-7-jdk
+   10  sudo apt-get install -y eclipse
+   11  ssh localhost
+   12  java -version
+   13  mysql -uroot -p
+   14  ll /usr/lib/jvm/java-7-openjdk-amd64/\
+   15  ll /usr/lib/jvm/java-7-openjdk-amd64/
+   16  scp /home/bigdata/Downloads/HadoopInstallationGuide.doc 172.25.181.81:
+   17  ls
+   18  which ls
+   19  echo $PATH
+   20  cmd
+   21  echo $PATH
+   22  source ~/.bashrc
+   23  hdfs namenode -format
+   24  start-all.sh
+   25  1jps
+   26  jps
+   27  ifconfig
+   28  sudo apt-get install mysql-server
+   29  jps
+   30  hdfs dfs -ls /
+   31  source ~/.bashrc
+   32  hdfs dfs -ls /
+   33  scala
+   34  cd /home/bigdata/projects/idea-IC-145.597.3/bin
+   35  sudo apt-get install -y openssh-server
+   36  sudo apt-get install -y openjdk-7-jdk
+   37  sudo apt-get install -y eclipse
+   38  sudo apt-get install -y mysql-server
+   39  sudo apt-get install -y python
+   40  jps
+   41  hdfs dfs -mkdir /test
+   42  hdfs dfs -ls /
+   43  hdfs dfs -mkdir /test/subdir1
+   44  hdfs dfs -ls /
+   45  hdfs dfs -ls -R /
+   46  hdfs dfs -put test.txt /test/
+   47  hdfs dfs -ls /test
+   48  hdfs dfs -cat /test/test.txt
+   49  history
+   50  history > commands.txt
